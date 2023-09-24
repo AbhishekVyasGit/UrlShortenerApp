@@ -1,6 +1,7 @@
+require("dotenv").config();
 const mongoose = require("mongoose");
 
-const uri = "mongodb://localhost:27017/urlShort"
+const uri = process.env.MONGO_URI;
 
 const connect =() => {
     console.log("connected successfully");
